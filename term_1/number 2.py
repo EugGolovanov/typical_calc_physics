@@ -1,0 +1,13 @@
+import numpy as np
+g = np.float64(9.80665)
+m1 = np.float64(0.1)
+m2 = np.float64(0.3)
+m = np.float64(0.2)
+a = np.abs(np.float64( (g*(m1 - m2)/(m/2 +m1 +m2))))
+d_a = a * (10**(-5)/g)
+T1 = m1*(g - a)
+T2 = m2*(g + a)
+d = (10**(-5)/g)
+print('a =', round(a, 6), '+-', round(d_a, 6))
+print('T_1 =', round(T1, 7), '+-', round(d*T1,7))
+print('T_2 =', round(T2, 6), '+-', round(d*T2,6))
